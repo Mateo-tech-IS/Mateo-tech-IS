@@ -1,0 +1,61 @@
+using System;
+
+class My_Calculator
+{
+    static void Main()
+    {
+        
+        double num1, num2, result;
+        string operation="";
+        
+        Console.WriteLine("My Calculator");
+        
+        Console.Write("Enter first number: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+        
+        Console.WriteLine("Enter the operation (+, -, *, /)");
+        operation = Console.ReadLine();
+        
+        Console.Write("Enter the second number: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+        
+        switch (operation)
+        {
+            case "+":
+            result = num1+num2;
+            Console.WriteLine($"Result: {num1} + {num2} = {result}");
+            break;
+            
+            case "-":
+            result = num1-num2;
+            Console.WriteLine($"Result: {num1} - {num2} = {result}");
+            break;
+            
+            case "*":
+            result = num1*num2;
+            Console.WriteLine($"Result: {num1} * {num2} = {result}");
+            break;
+            
+            case "/":
+            if(num2 != 0)
+            {
+                result = num1/num2;
+                Console.WriteLine($"Result: {num1} / {num2} = {result}");
+                
+            }
+            else
+            {
+                Console.WriteLine("Error: dont divisible by zero");
+                
+               
+            }
+            break;
+             default:
+                Console.WriteLine("Invalid Operation: Please use this operations (+, -, *, or /");
+                break;
+        }
+        Console.WriteLine("Press any key to Exit");
+        Console.ReadKey();
+       
+    }
+}
